@@ -1,5 +1,8 @@
 //inp init -y
 //Prender server es con node app.js
+//npm run dev <= modo de desarrollo 
+//
+
 //PASO 1
 const express = require('express');
 const path = require('path');
