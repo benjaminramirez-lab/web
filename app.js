@@ -1,12 +1,17 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const app = express();
 
-const PORT = 3000;
-
+const PORT = process.env.PORT;
+const path = require('path');
 
 //configurar ejs
 app.set('view engine', 'ejs');
+
+//configurar estaticos
+app.use(express.static(path.join(__dirname, 'public')));
 
 //RUTAS
 app.get('/', (req, res) => {
@@ -53,3 +58,4 @@ app.listen(PORT, () =>{
 //Prender server es con node app.js
 //npm run dev <= modo de desarrollo 
 //$ npm install ejs <= italador de ejs
+//istalar npm i dotenev

@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
+}
+
+.hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #ffffff, blanchedalmond);
+}
+
+.mi.vh-75 {
+    min-height: 75vh;
+}
+
+.hero-icon {
+    font-size: 15rem;
+    color: aqua;
+}
+
+.pag-header{
+    background: linear-gradient(135deg, #ffffff, blanchedalmond);
+}
