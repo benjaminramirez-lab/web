@@ -35,25 +35,6 @@ app.listen(PORT, () =>{
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //inp init -y
 //Prender server es con node app.js
 //npm run dev <= modo de desarrollo 
