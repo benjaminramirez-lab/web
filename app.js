@@ -10,6 +10,11 @@ const path = require('path');
 //configurar ejs
 app.set('view engine', 'ejs');
 
+//MIDOLEWARES   
+//Permite leer informacion enviada
+//desde el formulario HTML
+app.use(express.urlencoded({extended: true }));
+
 //configurar estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -26,9 +31,28 @@ app.get('/nosotros', (req, res) => {
     res.render('nosotros');
 });
 
-app.get('/contactos', (req, res) => {
-    res.render('contactos');
+app.get('/contacto', (req, res) => {
+    res.render('contacto');
 });
+
+app.post('/contacto',(req, res) =>{
+    const {
+        nombre, 
+        correo, 
+        asunto, 
+        mensaje
+    } = req.body;
+
+    console.log("--------------------------------------");
+    console.log("NUEVO MENSAJE");
+    console.log("--------------------------------------");
+
+    console.log("nombre", nombre);
+    console.log("correo", correo);
+    console.log("asunto", asunto);
+    console.log("mensaje", mensaje);
+});
+
 
 app.listen(PORT, () =>{
     console.log('Servidor corriendo em http://localhost:&(PORT)');
